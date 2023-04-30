@@ -2,11 +2,12 @@
 
 define('ROOT',$_SERVER['DOCUMENT_ROOT']);
 
-function autoload($class_name)
+function autoload($class)
 {
-		$path_to_file = "{$class_name}.php";
-		if (file_exists($path_to_file)) {
-			require $path_to_file;
+		$path = ROOT."/{$class}.php";
+		$path = str_replace('/',DIRECTORY_SEPARATOR, $path);
+		if (file_exists($path)) {
+			require $path;
 		}
 }
 
