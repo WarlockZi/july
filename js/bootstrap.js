@@ -3608,7 +3608,7 @@
 
 
     getContent() {
-      return Object.values(this._config.content).map(config => this._resolvePossibleFunction(config)).filter(Boolean);
+      return Object.values(this._config.index).map(config => this._resolvePossibleFunction(config)).filter(Boolean);
     }
 
     hasContent() {
@@ -3618,7 +3618,7 @@
     changeContent(content) {
       this._checkContent(content);
 
-      this._config.content = { ...this._config.content,
+      this._config.content = { ...this._config.index,
         ...content
       };
       return this;
@@ -3628,7 +3628,7 @@
       const templateWrapper = document.createElement('div');
       templateWrapper.innerHTML = this._maybeSanitize(this._config.template);
 
-      for (const [selector, text] of Object.entries(this._config.content)) {
+      for (const [selector, text] of Object.entries(this._config.index)) {
         this._setContent(templateWrapper, text, selector);
       }
 
@@ -3647,7 +3647,7 @@
     _typeCheckConfig(config) {
       super._typeCheckConfig(config);
 
-      this._checkContent(config.content);
+      this._checkContent(config.index);
     }
 
     _checkContent(arg) {
@@ -4369,7 +4369,7 @@
     }
 
     _getContent() {
-      return this._resolvePossibleFunction(this._config.content);
+      return this._resolvePossibleFunction(this._config.index);
     } // Static
 
 

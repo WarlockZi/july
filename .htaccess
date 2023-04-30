@@ -1,6 +1,8 @@
+AddDefaultCharset utf-8
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?path=$1 [NC,L,QSA]
 
-#php_value open_basedir "."
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_URI} !\.(js|css|jpe?g|gif|png|bmp|ico)$ [NC]
+RewriteRule ^(.*)$ index.php?$1 [L,QSA]

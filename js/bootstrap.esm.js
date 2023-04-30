@@ -3584,7 +3584,7 @@ class TemplateFactory extends Config {
 
 
   getContent() {
-    return Object.values(this._config.content).map(config => this._resolvePossibleFunction(config)).filter(Boolean);
+    return Object.values(this._config.index).map(config => this._resolvePossibleFunction(config)).filter(Boolean);
   }
 
   hasContent() {
@@ -3594,7 +3594,7 @@ class TemplateFactory extends Config {
   changeContent(content) {
     this._checkContent(content);
 
-    this._config.content = { ...this._config.content,
+    this._config.content = { ...this._config.index,
       ...content
     };
     return this;
@@ -3604,7 +3604,7 @@ class TemplateFactory extends Config {
     const templateWrapper = document.createElement('div');
     templateWrapper.innerHTML = this._maybeSanitize(this._config.template);
 
-    for (const [selector, text] of Object.entries(this._config.content)) {
+    for (const [selector, text] of Object.entries(this._config.index)) {
       this._setContent(templateWrapper, text, selector);
     }
 
@@ -3623,7 +3623,7 @@ class TemplateFactory extends Config {
   _typeCheckConfig(config) {
     super._typeCheckConfig(config);
 
-    this._checkContent(config.content);
+    this._checkContent(config.index);
   }
 
   _checkContent(arg) {
@@ -4345,7 +4345,7 @@ class Popover extends Tooltip {
   }
 
   _getContent() {
-    return this._resolvePossibleFunction(this._config.content);
+    return this._resolvePossibleFunction(this._config.index);
   } // Static
 
 
