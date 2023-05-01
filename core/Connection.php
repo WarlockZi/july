@@ -1,27 +1,35 @@
 <?php
+
 namespace core;
 
 class Connection
 {
 	private $dbh;
 
-	public $settings = [
-		'prefix' => 'mysql',
-		'host' => 'localhost',
-		'port' => '3306',
-//		'dbname' => 'vvoronk1_1',
-		'dbname' => 'test_interview',
-		'charset' => 'utf8',
-		'user' => 'root',
-		'password' => 'root',
-	];
+	private $settings;
 
 	public function __construct()
 	{
+		$this->setEnv();
 		$this->connect();
 	}
 
-	protected function connect(){
+	protected function setEnv()
+	{
+		$env = parse_ini_file(ROOT . '/.env');
+		$this->settings = [
+			'prefix' => 'mysql',
+			'host' => 'localhost',
+			'port' => '3306',
+			'dbname' => $env['DB_NAME'],
+			'user' => $env['DB_USER'],
+			'password' => $env['DB_PASSWORD'],
+			'charset' => 'utf8',
+		];
+	}
+
+	protected function connect()
+	{
 		$dsn = "{$this->settings['prefix']}:host={$this->settings['host']};port={$this->settings['port']};dbname={$this->settings['dbname']};charset={$this->settings['charset']}";
 
 		$options = [
@@ -43,6 +51,7 @@ class Connection
 		$res = $sth->execute($params);
 		return $res;
 	}
+
 	public function lastId()
 	{
 		return $this->dbh->lastInsertId();

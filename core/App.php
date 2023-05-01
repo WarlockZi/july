@@ -22,11 +22,5 @@ class App
 			throw new \Exception('нет метода');
 		}
 		$controller->$action();
-
-		echo '<br>';
-//		var_dump($route);
-		echo '<br>';
-
 	}
-
 }
