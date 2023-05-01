@@ -4,7 +4,7 @@ namespace core;
 
 class Router
 {
-	private Route $route;
+	private $route;
 	private $patterns = [];
 	private $url;
 
