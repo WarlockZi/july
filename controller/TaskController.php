@@ -2,6 +2,8 @@
 
 namespace controller;
 
+use core\Auth;
+use core\Common;
 use core\Route;
 use model\Task;
 
@@ -14,16 +16,27 @@ class TaskController extends Controller
 
 	public function index()
 	{
-		$tasks = Task::all();
-
+		$admin = Auth::getAuth();
+		$page = 1;
+		$orderby = 'name';
+		if (isset($_POST['page'])) {
+			$page = $_POST['page'];
+			$tasks = Task::part($page, $orderby);
+			$tasks = Common::getFileContent(ROOT . '/view/Task/tasks.php', compact('tasks', 'admin'));
+			exit($tasks);
+		}
+		$tasks = Task::part($page, $orderby);
+		$tasks = Common::getFileContent(ROOT . '/view/Task/tasks.php', compact('tasks', 'admin'));
 		$data = [
-//			'header' => Header::make('guest', $this->di->get('auth')),
-			'content' => $tasks,
+			'admin' => $admin,
+			'tasks' => $tasks,
+			'pages' => TaskService::pagination(),
 		];
+
 		$this->view->render($data);
 	}
 
-	public function edit($id)
+	public function update($id)
 	{
 		if (!$this->di->get('auth')->authorized()) {
 			\header("Location:/");
@@ -38,23 +51,24 @@ class TaskController extends Controller
 
 		$res = Task::update($params);
 		exit(json_encode($res));
-
-
 	}
+
 
 	public function create()
 	{
-		$post = json_decode($_POST['param']);
+		$admin = Auth::getAuth();
+		$task = [];
+		$values = [];
+		foreach ($_POST as $k => $v) {
+			$task[$k] = strip_tags($v);
+			$values[] = strip_tags($v);
+		}
 
-		$important = $post->check;
-		$date = $post->date;
-		$todo = $post->todo;
-		$userId = $this->di->get('auth')->user()['id'];
-
-		$params = [$important, $date, $todo, $userId];
-		$id = Task::create($params);
+		$id = Task::create($values);
+		$task['id']=$id;
+		$task = Common::getFileContent(ROOT.'/view/Task/task.php',compact('task','admin'));
 		if ($id) {
-			exit(json_encode(['ok', $id]));
+			exit(json_encode(['task'=>$task]));
 		} else {
 			exit(json_encode(['Запись не создана']));
 		}
@@ -69,4 +83,6 @@ class TaskController extends Controller
 			exit(json_encode(['Запись не удалена']));
 		}
 	}
+
+
 }

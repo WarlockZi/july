@@ -1,11 +1,8 @@
 import Auth from './Auth/Auth.js'
-import Validator from "./Validator/Validator.js";
-import Task from "./Task/Task.js";
 
-let validator = new Validator()
-validator.validateForm()
+import TaskPage from "./Task/TaskPage.js";
 
 let auth = new Auth()
 
-let task = new Task()
+let task = new TaskPage()
 

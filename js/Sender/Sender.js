@@ -3,17 +3,30 @@ export default class Sender {
     this.url = url
     this.formData = new FormData
     for (let el in data) {
-      debugger
       this.formData.append(el, data[el])
     }
   }
 
-  async send(){
+  async send() {
     let res = await fetch(this.url, {
       method: "POST",
       body: this.formData
     })
-    return  await res.json()
+
+    if (this.isJson(res)) {
+      return await res.json()
+    }
+    return await res.text()
   }
+
+  async isJson(str) {
+    try {
+      await JSON.parse(str);
+    } catch (e) {
+      return false;
+    }
+    return true;
+  }
+
 
 }

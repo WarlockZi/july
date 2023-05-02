@@ -10,7 +10,7 @@ class Router
 
 	public function __construct()
 	{
-		$this->url = $_SERVER['REQUEST_URI'];
+		$this->url = trim($_SERVER['REQUEST_URI'],'?');
 		$this->skipAssets($this->url);
 		$this->patterns = require __DIR__ . '/routes.php';
 		$this->setRoute();
@@ -18,7 +18,7 @@ class Router
 	}
 
 	protected function skipAssets($url){
-		if (preg_match('[\.css|\.js]',$url)){
+		if (preg_match('[\.css|\.js|\.ico]',$url)){
 			exit();
 		}
 	}

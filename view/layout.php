@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="../css/bootstrap.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="../css/style.css">
 	<title>t o do</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
 
 
 <script src="../js/bootstrap.bundle.js"></script>
-<script src="../js/app.js"></script>
+<script type="module" src="../js/app.js"></script>
 
 </body>
 </html>

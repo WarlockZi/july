@@ -7,10 +7,14 @@
 </header>
 
 <main>
-	<form class="container сol-md-4 my-4 requires-validation" novalidate >
+	<form class="container сol-md-4 my-4 needs-validation" novalidate >
 		<div class="card">
 			<div class="card-body">
 				<div class="d-flex flex-column">
+
+					<div class="invalid-feedback wrong-data">
+						неправильные реквизиты доступа
+					</div>
 
 					<div class="form-group has-validation mb-3">
 						<label for="name" class="form-label">имя</label>
@@ -22,7 +26,7 @@
 					</div>
 
 
-					<div class="form-group mb-3">
+					<div class="form-group has-validation mb-3">
 						<label for="password" class="form-label">пароль</label>
 						<input type="text" id="password" class="form-control" maxlength="50" autocomplete="off"
 						       placeholder="пароль" pattern="[a-zA-Z0-9]{3,15}" required>

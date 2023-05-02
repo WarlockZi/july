@@ -62,6 +62,13 @@ class Model
 		$sql = "SELECT * FROM `{$instance->table}` WHERE `id`=?";
 		return $instance->db->query($sql, [$id])[0];
 	}
+	public static function findByNamePassword($name, $password)
+	{
+		$instance = new static();
+		$table = $instance->getTable();
+		$sql = "SELECT * FROM `{$instance->table}` WHERE `name`=? AND `password`=?";
+		return $instance->db->query($sql, [$name, $password])[0];
+	}
 
 	public static function del($id)
 	{
@@ -75,7 +82,7 @@ class Model
 	{
 		$instance = new static();
 		$table = $instance->getTable();
-		$sql = "INSERT INTO `{$table}` SET (`important`,`date`,`todo`,`user_id`) VALUES (?,?,?,?)";
+		$sql = "INSERT INTO `{$table}` (`email`,`name`,`task`,`done`) VALUES (?,?,?,?)";
 		$instance->db->execute($sql, $arr);
 		$id = $instance->db->lastId();
 		return $id;
@@ -90,6 +97,19 @@ class Model
 		try {
 			$instance->db->execute($sql, $arr);
 			return $arr;
+		} catch (\Exception $exception) {
+			return $exception->getMessage();
+		}
+	}
+
+	public static function count()
+	{
+		$instance = new static();
+		$table = $instance->getTable();
+		$sql = "SELECT COUNT(*) FROM `{$table}`";
+		try {
+			$count = $instance->db->query($sql, []);
+			return (int)$count[0]['COUNT(*)'];
 		} catch (\Exception $exception) {
 			return $exception->getMessage();
 		}

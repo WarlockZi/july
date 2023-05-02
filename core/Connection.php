@@ -44,17 +44,11 @@ class Connection
 		}
 	}
 
-
 	public function execute($sql, $params)
 	{
 		$sth = $this->dbh->prepare($sql);
 		$res = $sth->execute($params);
 		return $res;
-	}
-
-	public function lastId()
-	{
-		return $this->dbh->lastInsertId();
 	}
 
 	public function query($sql, $params)
@@ -64,6 +58,11 @@ class Connection
 		$result = $smt->fetchAll(\PDO::FETCH_ASSOC);
 
 		return $result ? $result : [];
+	}
+
+	public function lastId()
+	{
+		return $this->dbh->lastInsertId();
 	}
 
 }

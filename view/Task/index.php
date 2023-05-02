@@ -1,64 +1,131 @@
-
 <header class="site-header sticky-top py-1 bg-light">
 	<nav class="container d-flex flex-column flex-md-row justify-content-end">
 		<div class="btn-group">
-			<a class="py-2 d-md-inline-block btn btn-outline-primary" href="#">Войти</a>
-			<a class="py-2 d-md-inline-block btn btn-outline-primary" href="#">Выйти</a>
+				<? if (!$admin): ?>
+			  <a class="py-2 d-md-inline-block btn btn-outline-primary" href="/auth/login">Войти</a>
+				<? endif; ?>
+				<? if ($admin): ?>
+			  <a class="py-2 d-md-inline-block btn btn-outline-primary" href="/auth/logout">Выйти</a>
+				<? endif; ?>
 		</div>
 	</nav>
 </header>
 
 <main>
-	<div class="container сol-md-4 my-4">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="card">
-					<div class="card-body">
-						<div class="d-flex flex-column">
-							<div class="form-group">
-								<input type="text" id="title" class="form-control" maxlength="50" autocomplete="off"
-											 placeholder="Title" required>
-							</div>
-							<div class="form-check form-switch my-1">
-								<input class="form-check-input" type="checkbox" id="important">
-								<label class="form-check-label" for="important">Важная</label>
-							</div>
-							<button type="submit" class="btn btn-success btn-block my-2 float-right">Save</button>
+	<div class="container сol-md-4 my-5 fs-6 task-page">
+		<div class="row  justify-content-end">
+
+			<button type="button" id="newTaskBtn" class="btn btn-primary col-4 float-end mb-4" data-bs-toggle="modal"
+			        data-bs-target="#taskForm" data-create>
+				Новая задача
+			</button>
+
+
+			<div class="row task-head">
+				<div class="col-2 text-left d-flex">
+					<i class="bi bi-sort-alpha-down px-1"></i>
+					<p class="font-weight-bold">имя</p>
+				</div>
+				<div class="col-2 text-left d-flex">
+					<i class="bi bi-sort-alpha-down px-1"></i>
+					<p class="font-weight-bold">email</p>
+				</div>
+				<div class="col-3 text-right">
+					<p class="font-weight-bold">текст задачи</p>
+				</div>
+				<div class="col-2 text-right d-flex">
+					<i class="bi bi-sort-alpha-down px-1"></i>
+					<p class="font-weight-bold">статус</p>
+				</div>
+				<div class="col-2 text-right">
+					<p class="font-weight-bold">пометка</p>
+				</div>
+					 <? if ($admin): ?>
+				  <div class="col-1 text-right">
+
+				  </div>
+					 <? endif; ?>
+			</div>
+			<hr>
+			<div class="tasks">
+				<?=$tasks?>
+			</div>
+		</div>
+
+		<div class="container col-md-8 d-flex my-5 justify-content-center">
+			<div class="btn-group me-2" role="group" id="pagination">
+					 <? for ($i = 1; $i <= $pages; $i++): ?>
+				  <button type="button" class="btn btn-secondary"><?= $i ?></button>
+					 <? endfor; ?>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+</main>
+
+
+<!-- Modal -->
+<div class="modal fade" id="taskForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Задача</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<form class="card-body needs-validation" novalidate>
+				<div class="modal-body">
+
+					<div class="d-flex flex-column">
+
+						<div class="form-group has-validation mb-3"
+						">
+						<label for="name" class="form-label">имя</label>
+						<input type="text" id="name" class="form-control name" maxlength="50" autocomplete="on"
+						       placeholder="имя" required>
+						<div class="invalid-feedback">
+							имя не может быть пустым
 						</div>
 					</div>
-				</div>
-			</div>
 
-			<div class="col-md-8">
-				<div class="row">
-					<div class="col-sm-3 text-left">
-						<p class="font-weight-bold">Title</p>
+					<div class="form-group has-validation mb-3">
+						<label for="email" class="form-label">email</label>
+						<input type="text" id="email" class="form-control email" maxlength="50" autocomplete="on"
+						       placeholder="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+						<div class="invalid-feedback">
+							email не может быть пустым и должен содержать значок @
+						</div>
 					</div>
-					<div class="col-sm-6 text-left">
-						<p class="font-weight-bold">Description</p>
-					</div>
-					<div class="col-sm-3 text-right">
-						<p class="font-weight-bold">Delete</p>
+
+					<div class="form-group has-validation mb-3"
+					">
+					<label for="task" class="form-label">текст задачи</label>
+					<input type="text" id="task" class="form-control task" maxlength="50" autocomplete="on"
+					       placeholder="текст задачи" required>
+					<div class="invalid-feedback">
+						задача не может быть пустой
 					</div>
 				</div>
-				<hr>
-				<div id="tasks"></div>
-			</div>
 
+				<div class="form-check form-switch my-1">
+					<label class="form-check-label" for="done">Выполнена</label>
+					<input class="form-check-input done" type="checkbox" id="done" value="0">
+				</div>
 
 		</div>
 
-	</div>
-
-	<div class="container col-md-8 d-flex my-5 justify-content-center">
-		<div class="btn-toolbar d-flex " role="toolbar" aria-label="Панель инструментов с группами кнопок">
-			<div class="btn-group me-2" role="group" aria-label="Вторая группа">
-				<button type="button" class="btn btn-secondary">1</button>
-				<button type="button" class="btn btn-secondary">2</button>
-				<button type="button" class="btn btn-secondary">3</button>
-			</div>
-		</div>
-	</div>
 
 	</div>
-</main>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		<button id="taskCreate" type="submit" class="btn btn-success btn-block my-2 float-right">
+			Сохранить
+		</button>
+	</div>
+	</form>
+</div>
+</div>
+</div>

@@ -15,7 +15,7 @@ class Route
 
 	public function __construct()
 	{
-		$this->url = $_SERVER['REQUEST_URI'];
+		$this->url = trim($_SERVER['REQUEST_URI'],'?');
 		$this->method = $_SERVER['REQUEST_METHOD'];
 	}
 
