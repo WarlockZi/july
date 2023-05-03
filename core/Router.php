@@ -13,7 +13,7 @@ class Router
 		$this->url = trim($_SERVER['REQUEST_URI'],'?');
 		$this->skipAssets($this->url);
 		$this->patterns = require __DIR__ . '/routes.php';
-		$this->setRoute();
+		$this->route = new Route();
 		$this->parse();
 	}
 
@@ -27,11 +27,6 @@ class Router
 	{
 		$this->route->controller = ucfirst($this->route->controllerName).'Controller';
 		return $this->route;
-	}
-
-	protected function setRoute()
-	{
-		$this->route = new Route();
 	}
 
 	public function parse()

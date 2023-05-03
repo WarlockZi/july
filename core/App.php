@@ -10,11 +10,11 @@ class App
 
 		$router = new Router();
 		$route = $router->getRoute();
-//		$connection = new Connection();
+
 
 		$controller = '\\controller\\' . $route->controller;
 		if (!class_exists($controller))
-			throw new \Exception('нет контроллера');
+			header('Location:/task/index');
 		$controller = new $controller($route);
 
 		$action = $route->action;

@@ -4,6 +4,7 @@ namespace controller;
 
 
 use core\Auth;
+use core\Controller;
 use model\User;
 
 class AuthController extends Controller

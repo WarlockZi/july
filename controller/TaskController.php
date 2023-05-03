@@ -4,6 +4,7 @@ namespace controller;
 
 use core\Auth;
 use core\Common;
+use core\Controller;
 use core\Route;
 use model\Task;
 
@@ -30,7 +31,7 @@ class TaskController extends Controller
 		$data = [
 			'admin' => $admin,
 			'tasks' => $tasks,
-			'pages' => TaskService::pagination(),
+			'pages' => self::pagination(),
 		];
 
 		$this->view->render($data);
@@ -82,6 +83,15 @@ class TaskController extends Controller
 		} else {
 			exit(json_encode(['Запись не удалена']));
 		}
+	}
+
+	public static function pagination()
+	{
+		$tasks = Task::count();
+		$count = (int)floor($tasks / 3);
+		if ($tasks % 3) $count++;
+		$r = (int)round($count, 0);
+		return $r;
 	}
 
 

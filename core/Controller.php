@@ -1,13 +1,20 @@
 <?php
 
 
-namespace controller;
-
+namespace core;
 
 use model\Task;
+use view\View;
 
-class TaskService
+abstract class Controller
 {
+	protected $view;
+
+	public function __construct($route)
+	{
+		$controller = ucfirst($route->controllerName);
+		$this->view = new View($route);
+	}
 
 	public static function pagination()
 	{
@@ -17,5 +24,4 @@ class TaskService
 		$r = (int)round($count, 0);
 		return $r;
 	}
-
 }
