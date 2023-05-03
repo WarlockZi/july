@@ -22,18 +22,18 @@
 
 
 			<div class="row task-head">
-				<div class="col-2 text-left d-flex">
+				<div class="col-2 text-left d-flex" data-sort="name">
 					<i class="bi bi-sort-alpha-down px-1"></i>
 					<p class="font-weight-bold">имя</p>
 				</div>
-				<div class="col-2 text-left d-flex">
+				<div class="col-2 text-left d-flex" data-sort="email">
 					<i class="bi bi-sort-alpha-down px-1"></i>
 					<p class="font-weight-bold">email</p>
 				</div>
 				<div class="col-3 text-right">
 					<p class="font-weight-bold">текст задачи</p>
 				</div>
-				<div class="col-2 text-right d-flex">
+				<div class="col-2 text-right d-flex" data-sort="status">
 					<i class="bi bi-sort-alpha-down px-1"></i>
 					<p class="font-weight-bold">статус</p>
 				</div>
@@ -48,7 +48,7 @@
 			</div>
 			<hr>
 			<div class="tasks">
-				<?=$tasks?>
+					 <?= $tasks ?>
 			</div>
 		</div>
 
@@ -63,8 +63,6 @@
 	</div>
 
 
-
-
 </main>
 
 
@@ -72,17 +70,19 @@
 <div class="modal fade" id="taskForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Задача</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<form class="card-body needs-validation" novalidate>
+
+			<form class="modal-body card-body needs-validation" novalidate>
+
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Задача</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+
 				<div class="modal-body">
 
-					<div class="d-flex flex-column">
+					<input type="hidden" id="id" class="id" value="0">
 
-						<div class="form-group has-validation mb-3"
-						">
+					<div class="form-group has-validation mb-3">
 						<label for="name" class="form-label">имя</label>
 						<input type="text" id="name" class="form-control name" maxlength="50" autocomplete="on"
 						       placeholder="имя" required>
@@ -100,32 +100,30 @@
 						</div>
 					</div>
 
-					<div class="form-group has-validation mb-3"
-					">
-					<label for="task" class="form-label">текст задачи</label>
-					<input type="text" id="task" class="form-control task" maxlength="50" autocomplete="on"
-					       placeholder="текст задачи" required>
-					<div class="invalid-feedback">
-						задача не может быть пустой
+					<div class="form-group has-validation mb-3">
+						<label for="task" class="form-label">текст задачи</label>
+						<input type="text" id="task" class="form-control task" maxlength="50" autocomplete="on"
+						       placeholder="текст задачи" required>
+						<div class="invalid-feedback">
+							задача не может быть пустой
+						</div>
 					</div>
+
+					<div class="form-check form-switch my-1">
+						<label class="form-check-label" for="done">Выполнена</label>
+						<input class="form-check-input done" type="checkbox" id="done" value="0">
+					</div>
+
 				</div>
 
-				<div class="form-check form-switch my-1">
-					<label class="form-check-label" for="done">Выполнена</label>
-					<input class="form-check-input done" type="checkbox" id="done" value="0">
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button id="taskSave" type="submit" class="btn btn-success btn-block my-2 float-right">
+						Сохранить
+					</button>
 				</div>
 
+			</form>
 		</div>
-
-
 	</div>
-	<div class="modal-footer">
-		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-		<button id="taskCreate" type="submit" class="btn btn-success btn-block my-2 float-right">
-			Сохранить
-		</button>
-	</div>
-	</form>
-</div>
-</div>
 </div>

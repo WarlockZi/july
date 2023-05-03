@@ -7,7 +7,7 @@
 </header>
 
 <main>
-	<form class="container сol-md-4 my-4 needs-validation" novalidate >
+	<form class="container сol-md-4 my-4 needs-validation" id="login"novalidate >
 		<div class="card">
 			<div class="card-body">
 				<div class="d-flex flex-column">

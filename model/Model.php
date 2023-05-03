@@ -81,21 +81,22 @@ class Model
 	public static function create($arr)
 	{
 		$instance = new static();
+
 		$table = $instance->getTable();
-		$sql = "INSERT INTO `{$table}` (`email`,`name`,`task`,`done`) VALUES (?,?,?,?)";
+		$sql = "INSERT INTO `{$table}` (`email`,`name`,`task`,`done`,`updated`) VALUES (?,?,?,?,?)";
 		$instance->db->execute($sql, $arr);
 		$id = $instance->db->lastId();
 		return $id;
 
 	}
 
-	public static function update($arr)
+	public static function update($arr,$set)
 	{
 		$instance = new static();
 		$table = $instance->getTable();
-		$sql = "UPDATE `{$table}` SET `important`=?,`date`=?,`todo`=?,`user_id`=? WHERE `id`=?";
+		$sql = "UPDATE `{$table}` SET $set WHERE `id`=?";
 		try {
-			$instance->db->execute($sql, $arr);
+			$res = $instance->db->execute($sql, $arr);
 			return $arr;
 		} catch (\Exception $exception) {
 			return $exception->getMessage();
