@@ -9,12 +9,10 @@
     <bookmark url="file://$PROJECT_DIR$/model/Task.php" line="19" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73f392c0-e9a3-4ecb-a166-c886a0eb3b36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="73f392c0-e9a3-4ecb-a166-c886a0eb3b36" name="Default Changelist" comment="env fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Task/TaskPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Task/TaskPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,7 +310,7 @@
       <workItem from="1683086039241" duration="30116000" />
       <workItem from="1683172552552" duration="21363000" />
       <workItem from="1683198103483" duration="3119000" />
-      <workItem from="1683214835086" duration="4955000" />
+      <workItem from="1683214835086" duration="7116000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1682770446105</created>
@@ -370,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683192775760</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="env fix">
+      <created>1683227329811</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683227329811</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -453,7 +458,8 @@
     <MESSAGE value="router" />
     <MESSAGE value="save updated" />
     <MESSAGE value="final" />
-    <option name="LAST_COMMIT_MESSAGE" value="final" />
+    <MESSAGE value="env fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="env fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -506,11 +512,6 @@
           <url>file://$PROJECT_DIR$/../../modules/system/html/openserver/phpmyadmin/db_sql_autocomplete.php</url>
           <line>12</line>
           <option name="timeStamp" value="119" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/model/Model.php</url>
-          <line>60</line>
-          <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="NONE" type="php">
           <url>file://$PROJECT_DIR$/../../modules/system/html/openserver/phpmyadmin/navigation.php</url>
