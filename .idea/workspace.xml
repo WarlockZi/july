@@ -10,131 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73f392c0-e9a3-4ecb-a166-c886a0eb3b36" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/view/Task/nextPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Task/Task.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Task/Task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/Task/TaskPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Task/TaskPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Task/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Task/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Task/task.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Task/task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Task.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="15" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="april" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/Task/task.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/Task/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/AuthController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/TaskController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="101" column="31" lean-forward="true" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
-              <folding>
-                <element signature="e#31#45#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/Task/nextPage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/App.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-              <folding>
-                <element signature="e#25#40#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/Task/Task.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="92" column="7" lean-forward="true" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -225,6 +119,7 @@
       </list>
     </option>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="PhpStorm 2019.1" id="546b04c0-2c80-448b-853d-e4501300008e" name="PhpStorm 2019.1" port="63343" />
@@ -232,14 +127,15 @@
       <server host="127.0.0.1" id="5cde8498-fa72-4011-a170-cccc420e4a95" name="127.0.0.1" />
     </servers>
   </component>
-  <component name="PhpWebServerValidation" deployment_server_id="c4b8a117-0469-47c1-9003-a62513ba5843" path_to_validation_script="C:\OpenServer\domains\april" selected_validation_type="LOCAL" web_path_to_validation_script="http://PhpStorm 2019.1:63343" />
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
+  <component name="PhpWebServerValidation" deployment_server_id="c4b8a117-0469-47c1-9003-a62513ba5843" path_to_validation_script="C:\OpenServer\domains\april" selected_validation_type="LOCAL" web_path_to_validation_script="http://april:80" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8" />
   <component name="ProjectFrameBounds">
     <option name="x" value="859" />
     <option name="y" value="3" />
     <option name="width" value="1066" />
     <option name="height" value="1065" />
   </component>
+  <component name="ProjectId" id="2PKnqcxyVwRQ6khBW3Z1wkJFqLt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -332,25 +228,36 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last.edited.regexp" value="Sample Text" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/core" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="debugger.stepping" />
+    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\april" />
       <recent name="C:\OpenServer\domains\april\core" />
       <recent name="C:\OpenServer\domains\april\js\Bootstrap" />
       <recent name="C:\OpenServer\domains\april\css\Bootstrap" />
       <recent name="C:\OpenServer\domains\april\view\Task" />
-      <recent name="C:\OpenServer\domains\april" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OpenServer\domains\april\core" />
@@ -360,19 +267,7 @@
       <recent name="C:\OpenServer\domains\april\view" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="PHP Remote Debug.ap">
+  <component name="RunManager" selected="PHP Built-in Web Server.april">
     <configuration name="df" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/april/index.php/main/df" useFirstLineBreakpoints="true" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -382,7 +277,7 @@
     <configuration name="april" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="ap" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="PhpStorm 2019.1" session_id="PHPSTORM">
+    <configuration name="ap" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="april" session_id="PHPSTORM">
       <method v="2" />
     </configuration>
     <list>
@@ -398,6 +293,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -416,6 +312,7 @@
       <workItem from="1683086039241" duration="30116000" />
       <workItem from="1683172552552" duration="21363000" />
       <workItem from="1683198103483" duration="3119000" />
+      <workItem from="1683214835086" duration="4955000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1682770446105</created>
@@ -532,7 +429,18 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
@@ -636,6 +544,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/april$index_php.dat" NAME="index.php Coverage Results" MODIFIED="1682832276125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

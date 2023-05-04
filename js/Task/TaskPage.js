@@ -38,7 +38,12 @@ export default class TaskPage {
 
     let cookie = new Cookie()
     let str = cookie.cookie.get_cookie('sort')
-    let obj = str.split('_')
+    let obj
+    if (str) {
+      obj = str.split('_')
+    }else {
+      obj = {1:'ASC'}
+    }
 
     let direction = obj[1]
 

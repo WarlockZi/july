@@ -33,7 +33,7 @@
 				<div class="col-3 text-center">
 					<p class="font-weight-bold">текст задачи</p>
 				</div>
-				<div class="col-2 text-center" data-sort="status">
+				<div class="col-2 text-center" data-sort="done">
 					<i class="bi bi-sort-alpha-down px-1"></i>
 					<p class="font-weight-bold">статус</p>
 				</div>

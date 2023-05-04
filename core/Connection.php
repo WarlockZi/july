@@ -16,14 +16,16 @@ class Connection
 
 	protected function setEnv()
 	{
-		$env = parse_ini_file(ROOT . '/.env');
+	  $file = dirname(__DIR__,1). '\.env';
+
+	  $_ENV = parse_ini_file($file);
 		$this->settings = [
 			'prefix' => 'mysql',
 			'host' => 'localhost',
 			'port' => '3306',
-			'dbname' => $env['DB_NAME'],
-			'user' => $env['DB_USER'],
-			'password' => $env['DB_PASSWORD'],
+			'dbname' => $_ENV['DB_NAME'],
+			'user' => $_ENV['DB_USER'],
+			'password' => $_ENV['DB_PASSWORD'],
 			'charset' => 'utf8',
 		];
 	}
