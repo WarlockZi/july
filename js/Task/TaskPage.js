@@ -25,7 +25,6 @@ export default class TaskPage {
       form.classList.add('was-validated')
     }, false)
 
-
     let pagination = page.querySelector('#pagination')
     pagination.onclick = this.getPage.bind(this)
 
@@ -49,8 +48,6 @@ export default class TaskPage {
       cookie.cookie.set_cookie('sort', field + '_ASC')
     }
     window.location.href = '/task/index'
-    // this.sender.send('/task/sort')
-    debugger
   }
 
   async getPage({target}) {
@@ -60,6 +57,4 @@ export default class TaskPage {
     let res = await this.sender.send('/task/index', data)
     document.querySelector(".tasks").innerHTML = res.html
   }
-
-
 }

@@ -21,7 +21,7 @@ class TaskController extends Controller
 	{
 		$admin = Auth::getAuth();
 		$page = 1;
-		$orderby = $this->getOrder();
+		$orderby = $this->getOrderBy();
 		if (isset($_POST['page'])) {
 			$page = $_POST['page'];
 			$tasks = Task::part($page, $orderby);
@@ -33,16 +33,16 @@ class TaskController extends Controller
 		$data = [
 			'admin' => $admin,
 			'tasks' => $tasks,
-			'pages' => self::pagination(),
+			'pages' => $this->pagination(),
 		];
 
 		$this->view->render($data);
 	}
 
-	protected function getOrder()
+	protected function getOrderBy()
 	{
-		$c = Cookie::get('sort');
-		return explode('_', $c);
+		$cookieVal = Cookie::get('sort');
+		return explode('_', $cookieVal);
 	}
 
 	public function update()
@@ -67,13 +67,9 @@ class TaskController extends Controller
 		$task['updated'] = 'обновлено';
 		$taskHtml = Common::getFileContent(ROOT . '/view/Task/task.php', compact('task', 'admin'));
 		exit(json_encode(['taskHtml' => $taskHtml]));
-
 	}
 
-
-	public function create()
-	{
-		$admin = Auth::getAuth();
+	protected function prepareTaskValues(){
 		$task = [];
 		$values = [];
 		if (isset($_POST['id'])) unset($_POST['id']);
@@ -82,49 +78,32 @@ class TaskController extends Controller
 			$task[$k] = strip_tags($v);
 			$values[] = strip_tags($v);
 		}
+		return [$task, $values];
+	}
 
+	public function create()
+	{
+		list($task, $values) = $this->prepareTaskValues();
 		$id = Task::create($values);
 		$task['id'] = $id;
+
+		$admin = Auth::getAuth();
 		$task = Common::getFileContent(ROOT . '/view/Task/task.php', compact('task', 'admin'));
 		if ($id) {
-			exit(json_encode(['task' => $task]));
+			$nextPage = $this->getNextPage();
+			exit(json_encode(['task' => $task,'nextPage'=>$nextPage]));
 		} else {
 			exit(json_encode(['Запись не создана']));
 		}
 	}
 
-	public function delete()
-	{
-		$res = Task::del($_POST['id']);
-		if ($res) {
-			exit(json_encode(['ok', 'Запись удалена']));
-		} else {
-			exit(json_encode(['Запись не удалена']));
+	protected function getNextPage(){
+		$tasksCount = Task::count();
+		if (($tasksCount-3)%3===1){
+			$number = $this->pagination();
+			return Common::getFileContent(ROOT.'/view/Task/nextPage.php',compact('number'));
 		}
-	}
-
-	public function sort()
-	{
-		$coockie = Cookie::get('sort');
-		$cooc = $_COOKIE;
-
-		if (!isset($_POST['sort'])) return false;
-
-
-		if (trim()) {
-			exit(json_encode(['ok', 'Запись удалена']));
-		} else {
-			exit(json_encode(['Запись не удалена']));
-		}
-	}
-
-	public static function pagination()
-	{
-		$tasks = Task::count();
-		$count = (int)floor($tasks / 3);
-		if ($tasks % 3) $count++;
-		$r = (int)round($count, 0);
-		return $r;
+		return '';
 	}
 
 

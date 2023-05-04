@@ -12,16 +12,15 @@ abstract class Controller
 
 	public function __construct($route)
 	{
-		$controller = ucfirst($route->controllerName);
 		$this->view = new View($route);
 	}
 
-	public static function pagination()
+	protected function pagination()
 	{
 		$tasks = Task::count();
 		$count = (int)floor($tasks / 3);
 		if ($tasks % 3) $count++;
-		$r = (int)round($count, 0);
-		return $r;
+		return (int)round($count, 0);
 	}
+
 }

@@ -2,7 +2,6 @@
 
 namespace controller;
 
-
 use core\Auth;
 use core\Controller;
 use model\User;
@@ -15,18 +14,17 @@ class AuthController extends Controller
 			$name = $_POST['name'];
 			$password = $_POST['password'];
 
-      $user = User::findByNamePassword($name, $password);
+			$user = User::findByNamePassword($name, $password);
 			if ($user) {
 				Auth::setAuth();
-				exit(json_encode(['ok'=>1]));
-			}else{
+				exit(json_encode(['ok' => 1]));
+			} else {
 				exit(json_encode(['Неверные email или пароль']));
 			}
 		}
 
 		$this->view->render([]);
 	}
-
 
 	public function logout()
 	{

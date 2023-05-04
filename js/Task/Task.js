@@ -24,7 +24,6 @@ export default class Task {
   }
 
   clearValidator() {
-    debugger
     this.querySelector('form').classList.remove('was-validated')
   }
 
@@ -48,11 +47,9 @@ export default class Task {
     }
   }
 
-
   async save(e) {
     e.preventDefault()
     let target = e.target
-    debugger
     let form = target.closest('#taskForm')
 
     let modal = bootstrap.Modal.getInstance(form)
@@ -79,11 +76,19 @@ export default class Task {
   async create(data) {
     let sender = new Sender()
     let res = await sender.send('/task/create', data)
-    if (res.task) {
+    if (res?.task) {
+      let toastEl = document.querySelector('.toast')
+      let toast = new bootstrap.Toast(toastEl)
+      toast.show()
       let tasks = document.querySelector('.tasks')
       let tasksCount = tasks.querySelectorAll('.row').length
       if (tasksCount < 3) {
-        tasks.insertAdjacentHTML('afterbegin', res.task)
+        tasks.insertAdjacentHTML('beforeend', res.task)
+      }
+      if (res?.nextPage){
+        let pagination = document.querySelector('#pagination')
+        pagination.insertAdjacentHTML('beforeend', res.nextPage)
+        pagination.lastElementChild.remove()
       }
     }
   }
