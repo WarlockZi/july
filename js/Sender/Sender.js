@@ -1,13 +1,12 @@
 export default class Sender {
-  constructor(url, data) {
-    this.url = url
+
+  async send(url, data) {
+        this.url = url
     this.formData = new FormData
     for (let el in data) {
       this.formData.append(el, data[el])
     }
-  }
 
-  async send() {
     let res = await fetch(this.url, {
       method: "POST",
       body: this.formData

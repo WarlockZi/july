@@ -2,9 +2,11 @@
 
 namespace controller;
 
+
 use core\Auth;
 use core\Common;
 use core\Controller;
+use core\Cookie;
 use core\Route;
 use model\Task;
 
@@ -19,7 +21,7 @@ class TaskController extends Controller
 	{
 		$admin = Auth::getAuth();
 		$page = 1;
-		$orderby = 'name';
+		$orderby = $this->getOrder();
 		if (isset($_POST['page'])) {
 			$page = $_POST['page'];
 			$tasks = Task::part($page, $orderby);
@@ -35,6 +37,12 @@ class TaskController extends Controller
 		];
 
 		$this->view->render($data);
+	}
+
+	protected function getOrder()
+	{
+		$c = Cookie::get('sort');
+		return explode('_', $c);
 	}
 
 	public function update()
@@ -97,10 +105,13 @@ class TaskController extends Controller
 
 	public function sort()
 	{
+		$coockie = Cookie::get('sort');
+		$cooc = $_COOKIE;
+
 		if (!isset($_POST['sort'])) return false;
 
-		$res = Task::del($id);
-		if ($res) {
+
+		if (trim()) {
 			exit(json_encode(['ok', 'Запись удалена']));
 		} else {
 			exit(json_encode(['Запись не удалена']));

@@ -22,8 +22,10 @@ class Task extends Model
 	public static function part($page, $orderby){
 		$offset = (int)$page*3-3;
 		$instance = new self();
+		$field = $orderby[0];
+		$directions = $orderby[1];
 
-		$sql = "SELECT * FROM tasks LIMIT 3 OFFSET {$offset}";
+		$sql = "SELECT * FROM tasks ORDER BY `{$field}` {$directions} LIMIT 3 OFFSET {$offset}";
 		$res = $instance->db->query($sql,[]);
 		return $res;
 	}

@@ -13,7 +13,7 @@
 
 <main>
 	<div class="container сol-md-4 my-5 fs-6 task-page">
-		<div class="row  justify-content-end">
+		<div class="row justify-content-end ">
 
 			<button type="button" id="newTaskBtn" class="btn btn-primary col-4 float-end mb-4" data-bs-toggle="modal"
 			        data-bs-target="#taskForm" data-create>
@@ -21,28 +21,28 @@
 			</button>
 
 
-			<div class="row task-head">
-				<div class="col-2 text-left d-flex" data-sort="name">
+			<div class="row task-head justify-content-between">
+				<div class="col-2 text-center" data-sort="name">
 					<i class="bi bi-sort-alpha-down px-1"></i>
 					<p class="font-weight-bold">имя</p>
 				</div>
-				<div class="col-2 text-left d-flex" data-sort="email">
+				<div class="col-2 text-center" data-sort="email">
 					<i class="bi bi-sort-alpha-down px-1"></i>
 					<p class="font-weight-bold">email</p>
 				</div>
-				<div class="col-3 text-right">
+				<div class="col-3 text-center">
 					<p class="font-weight-bold">текст задачи</p>
 				</div>
-				<div class="col-2 text-right d-flex" data-sort="status">
+				<div class="col-2 text-center" data-sort="status">
 					<i class="bi bi-sort-alpha-down px-1"></i>
 					<p class="font-weight-bold">статус</p>
 				</div>
-				<div class="col-2 text-right">
+				<div class="col-2 text-center">
 					<p class="font-weight-bold">пометка</p>
 				</div>
 					 <? if ($admin): ?>
-				  <div class="col-1 text-right">
-
+				  <div class="col-1 text-center">
+					  <p class="font-weight-bold"> редакт.</p>
 				  </div>
 					 <? endif; ?>
 			</div>

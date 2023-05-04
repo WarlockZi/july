@@ -2,6 +2,16 @@ html {
     overflow-y: scroll;
 }
 
-.modal.fade.show{
+.modal.fade.show {
     box-sizing: content-box;
 }
+
+@media screen and (max-width: 576px) {
+    .task-page {
+        font-size: 10px !important;
+    }
+    .btn{
+        padding: 2px 4px;
+    }
+}
+

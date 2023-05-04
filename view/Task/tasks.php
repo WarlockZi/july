@@ -1,6 +1,6 @@
 <? foreach ($tasks as $task): ?>
 
-	<div class="row" data-id="<?= $task['id']; ?>">
+	<div class="row justify-content-between" data-id="<?= $task['id']; ?>">
 		<div class="col-2 d-flex justify-content-center name"><?= $task['name']; ?></div>
 		<div class="col-2 d-flex justify-content-center email"><?= $task['email']; ?></div>
 		<div class="col-3 d-flex justify-content-center task"><?= $task['task']; ?></div>

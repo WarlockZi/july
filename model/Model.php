@@ -83,7 +83,7 @@ class Model
 		$instance = new static();
 
 		$table = $instance->getTable();
-		$sql = "INSERT INTO `{$table}` (`email`,`name`,`task`,`done`,`updated`) VALUES (?,?,?,?,?)";
+		$sql = "INSERT INTO `{$table}` (`name`,`email`,`task`,`done`,`updated`) VALUES (?,?,?,?,?)";
 		$instance->db->execute($sql, $arr);
 		$id = $instance->db->lastId();
 		return $id;

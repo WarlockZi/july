@@ -24,6 +24,7 @@ export default class Task {
   }
 
   clearValidator() {
+    debugger
     this.querySelector('form').classList.remove('was-validated')
   }
 
@@ -68,17 +69,17 @@ export default class Task {
   }
 
   async update(data) {
-    let sender = new Sender('/task/update', data)
-    let res = await sender.send()
+    let sender = new Sender()
+    let res = await sender.send('/task/update', data)
     if (res.taskHtml) {
       document.querySelector(`[data-id='${data.id}']`).outerHTML = res.taskHtml
     }
   }
 
   async create(data) {
-    let sender = new Sender('/task/create', data)
-    let res = await sender.send()
-    if (res.taskHtml) {
+    let sender = new Sender()
+    let res = await sender.send('/task/create', data)
+    if (res.task) {
       let tasks = document.querySelector('.tasks')
       let tasksCount = tasks.querySelectorAll('.row').length
       if (tasksCount < 3) {
