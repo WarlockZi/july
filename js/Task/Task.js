@@ -48,24 +48,33 @@ export default class Task {
     }
   }
 
+  toastShow(innerText='') {
+    let toasterEl = document.querySelector('.toast')
+    if (innerText) {
+      toasterEl.querySelector('.toast-body').innerText = "Авторизуйтесь!"
+    }
+    let toast = new bootstrap.Toast(toasterEl)
+    toast.show()
+  }
+
+  modalHide() {
+    let form = document.querySelector('#taskForm')
+    let modal = bootstrap.Modal.getInstance(form)
+    modal.hide();
+  }
+
+
   async save(e) {
     e.preventDefault()
-    debugger
-    let form = document.querySelector('#taskForm')
-    if (!this.checkAuth()) {
-      let modal = bootstrap.Modal.getInstance(form)
-      modal.hide();
 
-      let toasterEl = document.querySelector('.toast')
-      let toast = new bootstrap.Toast(toasterEl)
-      toast.show({content: 'Авторизуйтесь'})
+    let task = new Task
+    if (!this.checkAuth()) {
+      task.modalHide()
+      task.toastShow('Авторизуйтесь')
       return false
     }
 
-    let modal = bootstrap.Modal.getInstance(form)
-    modal.hide();
-
-    let task = new Task
+    task.modalHide()
     let data = task.DTO(form, 'value')
 
     if (data.id) {
@@ -77,7 +86,8 @@ export default class Task {
 
   checkAuth() {
     let cookie = new Cookie()
-    return cookie.cookie.get_cookie('admin')
+    let admin = cookie.cookie.get_cookie('admin')
+    return admin
   }
 
   async update(data) {
@@ -94,9 +104,8 @@ export default class Task {
     let sender = new Sender()
     let res = await sender.send('/task/create', data)
     if (res?.task) {
-      let toastEl = document.querySelector('.toast')
-      let toast = new bootstrap.Toast(toastEl)
-      toast.show()
+      let task = new Task()
+      task.toastShow()
       let tasks = document.querySelector('.tasks')
       let tasksCount = tasks.querySelectorAll('.row').length
       if (tasksCount < 3) {
