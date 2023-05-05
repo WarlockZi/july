@@ -26,7 +26,7 @@ export default class Auth {
       if (res.ok) {
         window.location.href = '/task/index'
       } else {
-        form.querySelector('.wrong-data').style.display = 'flex'
+        form.querySelector('.alert').classList.add('show')
       }
     }
   }
