@@ -1,11 +1,21 @@
 import Sender from "../Sender/Sender.js";
 
 export default class Auth {
-  constructor(props) {
+
+  constructor() {
     this.loginPage = document.querySelector('#login')
     if (!this.loginPage) return
 
     this.loginPage.onsubmit = this.submit.bind(this)
+
+    this.alert = document.querySelector('.alert')
+    this.alert.addEventListener("close.bs.alert", this.alertClose.bind(this))
+  }
+
+  alertClose(e) {
+    this.alert.classList.remove('show');
+    e.preventDefault()
+    return false;
   }
 
   async submit(e) {
@@ -31,7 +41,4 @@ export default class Auth {
     }
   }
 
-  stripTags(text) {
-    return text.replace(/(<([^>]+)>)/ig, "");
-  }
 }

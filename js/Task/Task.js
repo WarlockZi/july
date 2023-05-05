@@ -91,13 +91,11 @@ export default class Task {
   }
 
   async update(data) {
-
     let sender = new Sender()
     let res = await sender.send('/task/update', data)
     if (res.taskHtml) {
       document.querySelector(`[data-id='${data.id}']`).outerHTML = res.taskHtml
     }
-
   }
 
   async create(data) {

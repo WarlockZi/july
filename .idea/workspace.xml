@@ -11,7 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="73f392c0-e9a3-4ecb-a166-c886a0eb3b36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Auth/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Auth/Auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/Task/Task.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Task/Task.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Auth/login.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/Task/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1955">
+            <state relative-caret-position="899">
               <caret line="115" selection-start-line="115" selection-end-line="115" />
             </state>
           </provider>
@@ -60,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -75,11 +77,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Task/Task.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="119" column="3" lean-forward="true" selection-start-line="119" selection-start-column="3" selection-end-line="119" selection-end-column="3" />
+            <state relative-caret-position="834">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/Auth/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="19" column="59" lean-forward="true" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/Auth/Auth.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -122,6 +142,7 @@
       <find>$controller</find>
       <find>toast</find>
       <find>de</find>
+      <find>form-group has-validation mb-3</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,12 +177,10 @@
         <option value="$PROJECT_DIR$/core/Router.php" />
         <option value="$PROJECT_DIR$/controller/TaskService.php" />
         <option value="$PROJECT_DIR$/core/App.php" />
-        <option value="$PROJECT_DIR$/view/Auth/login.php" />
         <option value="$PROJECT_DIR$/view/layout.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/Sender/Sender.js" />
         <option value="$PROJECT_DIR$/js/Cookie/Cookie.js" />
-        <option value="$PROJECT_DIR$/js/Auth/Auth.js" />
         <option value="$PROJECT_DIR$/core/Cookie.php" />
         <option value="$PROJECT_DIR$/model/Task.php" />
         <option value="$PROJECT_DIR$/model/Model.php" />
@@ -174,7 +193,9 @@
         <option value="$PROJECT_DIR$/core/Controller.php" />
         <option value="$PROJECT_DIR$/view/Task/nextPage.php" />
         <option value="$PROJECT_DIR$/controller/TaskController.php" />
+        <option value="$PROJECT_DIR$/view/Auth/login.php" />
         <option value="$PROJECT_DIR$/js/Task/Task.js" />
+        <option value="$PROJECT_DIR$/js/Auth/Auth.js" />
       </list>
     </option>
   </component>
@@ -331,7 +352,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Remote Debug.ap">
+  <component name="RunManager" selected="PHP Built-in Web Server.april">
     <configuration name="df" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/april/index.php/main/df" useFirstLineBreakpoints="true" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -432,11 +453,25 @@
       <option name="project" value="LOCAL" />
       <updated>1683192775760</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="toast fix">
+      <created>1683262023282</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683262023282</updated>
+    </task>
+    <task id="LOCAL-00010" summary="alert">
+      <created>1683265171694</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683265171694</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181489000" />
+    <option name="totallyTimeSpent" value="184421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="859" y="3" width="1066" height="1065" extended-state="0" />
@@ -447,7 +482,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.50206614" side_tool="true" weight="0.17777778" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3287841" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4946352" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4946352" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3004292" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -456,7 +491,7 @@
       <window_info anchor="bottom" id="Regex Tester" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49801326" weight="0.15665236" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50198674" side_tool="true" weight="0.32832617" />
-      <window_info anchor="bottom" id="Version Control" order="11" visible="true" weight="0.32939914" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32939914" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -504,7 +539,9 @@
     <MESSAGE value="router" />
     <MESSAGE value="save updated" />
     <MESSAGE value="final" />
-    <option name="LAST_COMMIT_MESSAGE" value="final" />
+    <MESSAGE value="toast fix" />
+    <MESSAGE value="alert" />
+    <option name="LAST_COMMIT_MESSAGE" value="alert" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -768,13 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/Auth/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/Coockie.php" />
     <entry file="file://$PROJECT_DIR$/core/Cookie.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -822,13 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Auth/Auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -884,20 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/Task/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/App.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -949,10 +958,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/Task/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="899">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/Task/Task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="119" column="3" lean-forward="true" selection-start-line="119" selection-start-column="3" selection-end-line="119" selection-end-column="3" />
+        <state relative-caret-position="834">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Auth/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="19" column="59" lean-forward="true" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Auth/Auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
         </state>
       </provider>
     </entry>
