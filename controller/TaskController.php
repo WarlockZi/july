@@ -83,7 +83,9 @@ class TaskController extends Controller
 
 	public function create()
 	{
-		list($task, $values) = $this->prepareTaskValues();
+	  if (!Cookie::get('admin')) exit(json_encode(['auth'=>'Авторизуйтесь']));
+
+	  list($task, $values) = $this->prepareTaskValues();
 		$id = Task::create($values);
 		$task['id'] = $id;
 

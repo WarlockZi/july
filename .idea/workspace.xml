@@ -9,10 +9,10 @@
     <bookmark url="file://$PROJECT_DIR$/model/Task.php" line="19" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73f392c0-e9a3-4ecb-a166-c886a0eb3b36" name="Default Changelist" comment="env fix">
+    <list default="true" id="73f392c0-e9a3-4ecb-a166-c886a0eb3b36" name="Default Changelist" comment="env fix ROOT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Task/Task.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Task/Task.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,7 +310,7 @@
       <workItem from="1683086039241" duration="30116000" />
       <workItem from="1683172552552" duration="21363000" />
       <workItem from="1683198103483" duration="3119000" />
-      <workItem from="1683214835086" duration="7116000" />
+      <workItem from="1683214835086" duration="9502000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1682770446105</created>
@@ -375,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683227329811</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="env fix ROOT">
+      <created>1683233017869</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683233017869</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -459,7 +466,8 @@
     <MESSAGE value="save updated" />
     <MESSAGE value="final" />
     <MESSAGE value="env fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="env fix" />
+    <MESSAGE value="env fix ROOT" />
+    <option name="LAST_COMMIT_MESSAGE" value="env fix ROOT" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -471,7 +479,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/js/Task/Task.js</url>
-          <line>97</line>
+          <line>114</line>
           <option name="timeStamp" value="161" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="NONE" type="php">
@@ -540,7 +548,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/controller/TaskController.php</url>
-          <line>101</line>
+          <line>103</line>
           <option name="timeStamp" value="192" />
         </line-breakpoint>
       </breakpoints>
