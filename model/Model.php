@@ -28,12 +28,11 @@ class Model
 		}
 	}
 
-	public static function findByNamePassword($name, $password)
+	public static function findByEmailPassword($email, $password)
 	{
 		$instance = new static();
-		$table = $instance->getTable();
-		$sql = "SELECT * FROM `{$instance->table}` WHERE `name`=? AND `password`=?";
-		return $instance->db->query($sql, [$name, $password])[0];
+		$sql = "SELECT * FROM `{$instance->table}` WHERE `email`=? AND `password`=?";
+		return $instance->db->query($sql, [$email, $password])[0];
 	}
 
 	public static function create($arr)
@@ -41,11 +40,10 @@ class Model
 		$instance = new static();
 
 		$table = $instance->getTable();
-		$sql = "INSERT INTO `{$table}` (`name`,`email`,`task`,`done`,`updated`) VALUES (?,?,?,?,?)";
+		$sql = "INSERT INTO `{$table}` (`post`,`name`,`email`) VALUES (?,?,?)";
 		$instance->db->execute($sql, $arr);
 		$id = $instance->db->lastId();
 		return $id;
-
 	}
 
 	public static function update($arr,$set)
@@ -77,6 +75,18 @@ class Model
 	public function getTable()
 	{
 		return $this->table;
+	}
+
+	public static function find($id)
+	{
+		$instance = new static();
+
+		$sql = "SELECT * FROM `{$instance->table}` WHERE `id`=?";
+		try {
+			return  $instance->db->query($sql, [$id])[0];
+		} catch (\Exception $exception) {
+			return $exception->getMessage();
+		}
 	}
 
 }

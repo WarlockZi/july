@@ -10,16 +10,16 @@ class AuthController extends Controller
 {
 	public function login()
 	{
-		if (isset($_POST['name'])) {
-			$name = $_POST['name'];
+		if (isset($_POST['email'])) {
+			$email = $_POST['email'];
 			$password = $_POST['password'];
 
-			$user = User::findByNamePassword($name, $password);
+			$user = User::findByEmailPassword($email, $password);
 			if ($user) {
-				Auth::setAuth();
+				Auth::setAuth($user);
 				exit(json_encode(['ok' => 1]));
 			} else {
-				exit(json_encode(['Неверные email или пароль']));
+				exit(json_encode(['msg' => 'Неверные email или пароль']));
 			}
 		}
 
@@ -29,7 +29,29 @@ class AuthController extends Controller
 	public function logout()
 	{
 		Auth::logout();
-		\header('Location:/task/index');
+		\header('Location:/post/index');
+	}
+
+	public function register()
+	{
+		if ($_POST) {
+			if (!isset($_POST['email']) || !isset($_POST['password']))
+				exit(json_encode(['error' => 'Не все данные заполнены']));
+
+			$email = $_POST['email'];
+			$password = $_POST['password'];
+
+			$emailFound = User::findByEmail($email);
+			$user = User::findByEmailPassword($email, $password);
+
+			if (!$user && $emailFound)
+				exit(json_encode(['error' => 'данный email уже зарегистрирован. ']));
+
+			Auth::setAuth($user);
+//			header('Location:post/index');
+			exit(json_encode(['ok' => 1]));
+		}
+		$this->view->render([]);
 	}
 
 	protected function validateEmailPassword(string $email, string $password)

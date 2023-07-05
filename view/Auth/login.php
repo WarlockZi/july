@@ -1,28 +1,19 @@
-<header class="site-header sticky-top py-1 bg-light">
-	<nav class="container d-flex flex-column flex-md-row justify-content-end">
-		<div class="btn-group">
-			<a class="py-2 d-md-inline-block btn btn-outline-primary" href="/task/index">К делам</a>
-		</div>
-	</nav>
-</header>
+<?include dirname(__DIR__,1).'/shared/header.php'?>
 
 <main>
-	<form class="container сol-md-4 my-4 needs-validation" id="login" novalidate >
-		<div class="card">
+	<form class="container сol-md-3 col-lg-3 my-4 needs-validation" id="login" novalidate >
+		<div class="card" >
 			<div class="card-body">
+				<h1>Вход</h1>
+				<div class="alert d-none">Неверные email или пароль</div>
 				<div class="d-flex flex-column">
 
-					<div class="alert alert-danger alert-dismissible fade" role="alert">
-						неправильные реквизиты доступа
-						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-					</div>
-
 					<div class="form-group has-validation mb-3">
-						<label for="name" class="form-label">имя</label>
-						<input type="text" id="name" class="form-control" maxlength="50" autocomplete="on"
-						       placeholder="имя" required>
+						<label for="email" class="form-label">email</label>
+						<input type="text" id="email" class="form-control" maxlength="50" autocomplete="on"
+						       placeholder="email" required>
 						<div class="invalid-feedback">
-							имя не может быть пустым
+							email не может быть пустым
 						</div>
 					</div>
 

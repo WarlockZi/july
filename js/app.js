@@ -1,8 +1,15 @@
-import Auth from './Auth/Auth.js'
+// import Auth from './Auth/Auth.js'
+import PostPage from "./Post/PostPage.js";
+import Login from "./Auth/Login.js";
+import Register from "./Auth/Register.js";
 
-import TaskPage from "./Task/TaskPage.js";
+document.addEventListener("DOMContentLoaded", ready)
 
-new Auth()
+function ready(){
+  new Login()
+  new Register()
+  // new Auth()
+  new PostPage()
+}
 
-new TaskPage()
 

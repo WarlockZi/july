@@ -8,4 +8,9 @@ function autoload($class)
 	}
 }
 
+function composerAutoload(){
+	require dirname(__DIR__,1).'/vendor/autoload.php';;
+}
+
 spl_autoload_register('autoload');
+spl_autoload_register('composerAutoload');

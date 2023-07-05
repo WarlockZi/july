@@ -3,23 +3,25 @@
 
 namespace core;
 
-use model\Task;
+use model\Post;
 use view\View;
 
 abstract class Controller
 {
 	protected $view;
+	protected $route;
 
 	public function __construct($route)
 	{
+		$this->route = $route;
 		$this->view = new View($route);
 	}
 
 	protected function pagination()
 	{
-		$tasks = Task::count();
-		$count = (int)floor($tasks / 3);
-		if ($tasks % 3) $count++;
+		$posts = Post::count();
+		$count = (int)floor($posts / 3);
+		if ($posts % 3) $count++;
 		return (int)round($count, 0);
 	}
 

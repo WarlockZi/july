@@ -11,8 +11,10 @@ class View
 	protected $vars;
 	protected $viewPath = ROOT.'/view/';
 	protected $layout;
+	protected $route;
 	public function __construct(Route $route)
 	{
+		$this->route = $route;
 		$this->view = ucfirst($route->controllerName).'/'.$route->action.'.php';
 		$this->layout = $this->viewPath.'layout.php';
 	}

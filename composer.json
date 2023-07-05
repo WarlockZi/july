@@ -1,0 +1,18 @@
+{
+    "require": {
+        "fakerphp/faker": "^1.23"
+    },
+
+    "autoload": {
+        "classmap": [
+            "vendor/",
+            "app/services"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "vendor\\":"app/vendor"
+        }
+    }
+
+}

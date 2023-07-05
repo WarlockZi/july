@@ -1,2 +1,5 @@
 .env
 .idea
+.composer.json
+.composer.lock
+.composer.phar
