@@ -17,6 +17,13 @@ class Model
 		}
 	}
 
+	public static function all(){
+		$instance = new self();
+		$sql = "SELECT * FROM `{this->table}`";
+		$res = $instance->db->query($sql,[]);
+		return $res;
+	}
+
 
 	public static function login($email, $password)
 	{

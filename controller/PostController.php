@@ -19,10 +19,10 @@ class PostController extends Controller
 
 	public function edit(){
 		$id = $this->route->id;
+
 		$data = [
 			'user'=> Auth::getUser(),
-			'post' =>Post::find($id),
-			'comments'=>[],
+			'post' =>Post::withComments($id),
 		];
 
 		$this->view->render($data);
@@ -94,7 +94,7 @@ class PostController extends Controller
 
 	protected function getNextPage(){
 		$postsCount = Post::count();
-		if (($postsCount-3)%3===1){
+		if (($postsCount-10)%10===1){
 			$number = $this->pagination();
 			return Common::getFileContent(ROOT.'/view/Task/nextPage.php',compact('number'));
 		}

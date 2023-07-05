@@ -32,7 +32,6 @@ export default class PostPage {
   async getPage({target}) {
     let page = target.innerText
     let data = {page}
-    debugger
 
     let res = await this.sender.send('/post/index', data)
     document.querySelector(".posts").innerHTML = res.html

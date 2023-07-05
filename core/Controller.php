@@ -20,8 +20,8 @@ abstract class Controller
 	protected function pagination()
 	{
 		$posts = Post::count();
-		$count = (int)floor($posts / 3);
-		if ($posts % 3) $count++;
+		$count = (int)floor($posts / 10);
+		if ($posts % 10) $count++;
 		return (int)round($count, 0);
 	}
 

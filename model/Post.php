@@ -12,18 +12,20 @@ class Post extends Model
 		$this->table = 'posts';
 	}
 
-	public static function all(){
-		$instance = new self();
-		$sql = "SELECT * FROM `posts`";
-		$res = $instance->db->query($sql,[]);
-		return $res;
+	public static function withComments($id){
+		$instance = new static();
+		$sql = "SELECT p.*, c.text as comment, u.name FROM posts as p inner join comments as c ON p.id=c.post_id inner join users  as u ON u.id=c.user_id WHERE p.id=?";
+		$arr = $instance->db->query($sql,[$id]);
+		return $arr;
 	}
 
+
+
 	public static function part($page){
-		$offset = (int)$page*3-3;
+		$offset = (int)$page*10-10;
 		$instance = new self();
 
-		$sql = "SELECT * FROM `posts` LIMIT 3 OFFSET {$offset}";
+		$sql = "SELECT * FROM `posts` LIMIT 10 OFFSET {$offset}";
 		$res = $instance->db->query($sql,[]);
 		return $res;
 	}
@@ -32,8 +34,7 @@ class Post extends Model
 	{
 		$instance = new static();
 
-		$table = $instance->getTable();
-		$sql = "INSERT INTO `{$table}` (`title`,`long_text`,`short_text`,`date`) VALUES (?,?,?,?)";
+		$sql = "INSERT INTO `{$instance->table}` (`title`,`long_text`,`short_text`,`date`) VALUES (?,?,?,?)";
 		return $instance->db->execute($sql, $arr);
 	}
 

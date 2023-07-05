@@ -5,15 +5,21 @@
 
 		<div class="card-body">
 
-			<h2 class="card-title"><?= $post['title']; ?></h2>
+			<h2 class="card-title"><?= $post[0]['title']; ?></h2>
 
-			<p class="card-text"><?= $post['long_text']; ?></p>
-			<p class="card-text"><?= $post['date']; ?></p>
+			<p class="card-text"><?= $post[0]['long_text']; ?></p>
+			<div class="card-text d-flex justify-content-end"><?= $post[0]['date']; ?></div>
 
 			<h5 class="card-text">Комментарии</h5>
 
 
-				<? foreach ($comments as $comment): ?>
+				<? foreach ($post as $comment): ?>
+
+			  <div class="row mb-2">
+				  <div class="text fs-6"><?= $comment['name']; ?></div>
+				  <div class="text fs-5"><?= $comment['comment']; ?></div>
+			  </div>
+
 
 				<? endforeach; ?>
 
@@ -27,7 +33,7 @@
 					  </div>
 				  </div>
 				  <div class="float-end mt-2 pt-1">
-					  <button type="button" class="btn btn-primary btn-sm">Post comment</button>
+					  <button type="button" class="btn btn-primary btn-sm">Оставить комментарий</button>
 				  </div>
 			  </div>
 				<? endif; ?>

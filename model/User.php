@@ -16,11 +16,12 @@ class User extends Model
 	{
 		$instance = new static();
 
-		$sql = "INSERT INTO `users` (`email`,`password`) VALUES (?,?)";
+		$sql = "INSERT INTO `users` (`email`,`password`,`name`) VALUES (?,?,?)";
 		return $instance->db->execute($sql, $arr);
 	}
 
-	public static function findByEmail($email){
+	public static function findByEmail($email)
+	{
 		$instance = new static();
 
 		$sql = "SELECT * FROM `users` WHERE `email` = ?";
