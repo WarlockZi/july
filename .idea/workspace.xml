@@ -12,10 +12,14 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <list default="true" id="73f392c0-e9a3-4ecb-a166-c886a0eb3b36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="73f392c0-e9a3-4ecb-a166-c886a0eb3b36" name="Default Changelist" comment="" />
+>>>>>>> Stashed changes
 =======
     <list default="true" id="73f392c0-e9a3-4ecb-a166-c886a0eb3b36" name="Default Changelist" comment="" />
 >>>>>>> Stashed changes
@@ -106,8 +110,13 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <state relative-caret-position="561">
               <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+=======
+            <state relative-caret-position="90">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+>>>>>>> Stashed changes
 =======
             <state relative-caret-position="90">
               <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
@@ -131,6 +140,9 @@
         <entry file="file://$PROJECT_DIR$/model/Model.php">
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
           <provider selected="true" editor-type-id="text-editor">
@@ -144,6 +156,7 @@
         <entry file="file://$PROJECT_DIR$/core/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
@@ -155,6 +168,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -175,16 +190,47 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/AuthController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/Auth.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/Post/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
 >>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/controller/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -272,6 +318,10 @@
           <provider selected="true" editor-type-id="text-editor">
 >>>>>>> Stashed changes
 =======
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> Stashed changes
+=======
+        <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
 >>>>>>> Stashed changes
             <state relative-caret-position="748">
@@ -446,7 +496,10 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -479,8 +532,12 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
               <item name="july" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+>>>>>>> Stashed changes
 =======
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
 >>>>>>> Stashed changes
@@ -667,7 +724,11 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="242789000" />
+=======
+    <option name="totallyTimeSpent" value="240921000" />
+>>>>>>> Stashed changes
 =======
     <option name="totallyTimeSpent" value="240921000" />
 >>>>>>> Stashed changes
@@ -684,7 +745,11 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.22295806" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.22295806" />
+>>>>>>> Stashed changes
 =======
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967811" visible="true" weight="0.22295806" />
 >>>>>>> Stashed changes
@@ -1313,6 +1378,7 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1329,12 +1395,17 @@
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/js/Post/PostPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
