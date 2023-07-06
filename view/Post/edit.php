@@ -24,18 +24,11 @@
 				<? endforeach; ?>
 
 				<? if ($user): ?>
-			  <div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
-				  <div class="d-flex flex-start w-100">
-					  <div class="form-outline w-100">
-                <textarea class="form-control" id="textAreaExample" rows="4"
-                          style="background: #fff;"></textarea>
-						  <label class="form-label" for="textAreaExample">Комментарий</label>
-					  </div>
-				  </div>
+
 				  <div class="float-end mt-2 pt-1">
-					  <button type="button" class="btn btn-primary btn-sm">Оставить комментарий</button>
+					  <button type="button" data-bs-toggle="modal" data-bs-target="#postForm" class="btn btn-primary btn-sm">Оставить комментарий</button>
 				  </div>
-			  </div>
+
 				<? endif; ?>
 
 
@@ -43,4 +36,51 @@
 	</div>
 </main>
 
+
+<!-- Modal -->
+<div class="modal fade" id="postForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<form class="modal-body card-body needs-validation" novalidate>
+
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Задача</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+
+				<div class="modal-body">
+
+					<input type="hidden" id="id" class="id" value="0">
+
+					<div class="form-group has-validation mb-3">
+						<label for="name" class="form-label">Имя</label>
+						<input type="text" id="name" class="form-control name" maxlength="50" autocomplete="on"
+						       placeholder="имя" value="<?=$user['name']?>" required>
+					</div>
+
+
+					<div class="form-group has-validation mb-3">
+						<label for="task" class="form-label">текст задачи</label>
+						<input type="text" id="task" class="form-control task" maxlength="50" autocomplete="on"
+						       placeholder="текст задачи" required>
+						<div class="invalid-feedback">
+							задача не может быть пустой
+						</div>
+					</div>
+
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button id="postSave" type="submit" class="btn btn-success btn-block my-2 float-right">
+						Сохранить
+					</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
 

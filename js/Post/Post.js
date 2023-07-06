@@ -57,32 +57,32 @@ export default class Post {
     toast.show()
   }
 
-  modalHide() {
-    let form = document.querySelector('#postForm')
-    let modal = bootstrap.Modal.getInstance(form)
-    modal.hide();
-  }
-
-
-  async save(e) {
-    e.preventDefault()
-
-    let post = new Post
-    if (!this.checkAuth()) {
-      post.modalHide()
-      post.toastShow('Авторизуйтесь')
-      return false
-    }
-
-    post.modalHide()
-    let data = post.DTO(form, 'value')
-
-    if (data.id) {
-      post.update(data)
-    } else {
-      post.create(data)
-    }
-  }
+  // modalHide() {
+  //   let form = document.querySelector('#postForm')
+  //   let modal = bootstrap.Modal.getInstance(form)
+  //   modal.hide();
+  // }
+  //
+  //
+  // async save(e) {
+  //   e.preventDefault()
+  //
+  //   let post = new Post
+  //   if (!this.checkAuth()) {
+  //     post.modalHide()
+  //     post.toastShow('Авторизуйтесь')
+  //     return false
+  //   }
+  //
+  //   post.modalHide()
+  //   let data = post.DTO(form, 'value')
+  //
+  //   if (data.id) {
+  //     post.update(data)
+  //   } else {
+  //     post.create(data)
+  //   }
+  // }
 
   checkAuth() {
     let cookie = new Cookie()

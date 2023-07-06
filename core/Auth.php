@@ -33,12 +33,6 @@ class Auth
 		}
 	}
 
-//	public static function user()
-//	{
-//		if (isset($_SESSION['user'])) {
-//			unset($_SESSION['user']);
-//		}
-//	}
 	public static function register()
 	{
 		if (isset($_SESSION['user'])) {
