@@ -1,13 +1,12 @@
 import Post from "./Post.js";
 import Sender from "../Sender/Sender.js";
-import Cookie from "../Cookie/Cookie.js";
 
 export default class PostPage {
   constructor() {
-    this.sender = new Sender
     let page = document.querySelector('.post-page')
     if (!page) return
 
+    this.sender = new Sender
     let post = new Post
 
     let modal = document.querySelector('#postForm')
