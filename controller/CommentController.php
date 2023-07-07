@@ -14,11 +14,9 @@ class CommentController extends Controller
 		parent::__construct($route);
 	}
 
-
 	public function create()
 	{
 		Comment::create(array_values($_POST));
-		exit(json_encode(['Запись не создана']));
 	}
 
 }

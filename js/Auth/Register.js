@@ -36,7 +36,7 @@ export default class Register {
   }
 
   validatePasswordConfirm(self) {
-    // debugger
+
     if (self.password.value !== self.confirmPassword.value) {
       self.confirmPassword.setCustomValidity("Invalid field.")
     } else {

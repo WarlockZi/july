@@ -31,7 +31,7 @@ export default class Comment {
       post_id: +this.postId.innerText,
       date: new Date().toISOString().slice(0, 10),
     }
-    debugger
+
     let sender = new Sender()
     let res = await sender.send('/comment/create', data)
     if (res) {

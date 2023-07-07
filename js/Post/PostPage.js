@@ -1,4 +1,4 @@
-import Post from "./Post.js";
+// import Post from "./Post.js";
 import Sender from "../Sender/Sender.js";
 
 export default class PostPage {
@@ -7,7 +7,6 @@ export default class PostPage {
     if (!page) return
 
     page.querySelector('#pagination').onclick = this.getPage.bind(this)
-
   }
 
   async getPage({target}) {

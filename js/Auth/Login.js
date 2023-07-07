@@ -6,7 +6,6 @@ export default class Login {
     if (!this.loginPage) return
     this.password = document.querySelector('#password')
     this.email = document.querySelector('#email')
-    // this.confirmPassword = document.querySelector('#confirmPassword')
     this.loginPage.onsubmit = this.submit.bind(this)
   }
 
