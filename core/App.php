@@ -7,9 +7,9 @@ class App
 {
 	public function run()
 	{
-		$auth = new Auth();
+		new Auth();
 
-		new Seeder();
+//		new Seeder();
 
 		$router = new Router();
 		$route = $router->getRoute();
