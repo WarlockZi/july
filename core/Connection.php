@@ -59,9 +59,5 @@ class Connection
     return $result ? $result : [];
   }
 
-  public function lastId()
-  {
-    return $this->dbh->lastInsertId();
-  }
 
 }

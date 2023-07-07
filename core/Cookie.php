@@ -22,11 +22,11 @@ class Cookie
 		return $expire;
 	}
 
-	public static function set($key, $value, $timeDigit, $timeUnit)
-	{
-		$expire = time()+self::getTime($timeDigit, $timeUnit);
-		setcookie($key, (string)$value, $expire, '/');
-	}
+//	public static function set($key, $value, $timeDigit, $timeUnit)
+//	{
+//		$expire = time()+self::getTime($timeDigit, $timeUnit);
+//		setcookie($key, (string)$value, $expire, '/');
+//	}
 
 	public static function get($key)
 	{
@@ -35,10 +35,4 @@ class Cookie
 		}
 	}
 
-	public static function remove($key)
-	{
-		if (isset($_COOKIE[$key])) {
-			unset($_COOKIE[$key]);
-		}
-	}
 }

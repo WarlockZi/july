@@ -53,19 +53,6 @@ class Model
 		return $id;
 	}
 
-	public static function update($arr,$set)
-	{
-		$instance = new static();
-		$table = $instance->getTable();
-		$sql = "UPDATE `{$table}` SET $set WHERE `id`=?";
-		try {
-			$res = $instance->db->execute($sql, $arr);
-			return $arr;
-		} catch (\Exception $exception) {
-			return $exception->getMessage();
-		}
-	}
-
 	public static function count()
 	{
 		$instance = new static();

@@ -6,32 +6,15 @@ export default class PostPage {
     let page = document.querySelector('.post-page')
     if (!page) return
 
-    this.sender = new Sender
-    let post = new Post
+    page.querySelector('#pagination').onclick = this.getPage.bind(this)
 
-    let modal = document.querySelector('#postForm')
-    modal.addEventListener('shown.bs.modal', post.updateOrCreate)
-    modal.addEventListener('hidden.bs.modal', post.clearValidator)
-
-    let form = document.querySelector('#postForm .needs-validation')
-    form.addEventListener('submit', function (event) {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      } else {
-        post.save(event)
-      }
-      form.classList.add('was-validated')
-    }, false)
-
-    let pagination = page.querySelector('#pagination')
-    pagination.onclick = this.getPage.bind(this)
   }
 
   async getPage({target}) {
     let page = target.innerText
     let data = {page}
 
+    this.sender = new Sender
     let res = await this.sender.send('/post/index', data)
     document.querySelector(".posts").innerHTML = res.html
   }

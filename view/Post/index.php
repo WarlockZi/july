@@ -5,7 +5,7 @@
 		<div class="row justify-content-end ">
 
 			<div class="row post-head justify-content-between">
-				<div class="col-2 text-center" data-sort="name">
+				<div class="col-3 text-center" data-sort="name">
 					<p class="font-weight-bold">заголовок</p>
 				</div>
 				<div class="col-2 text-center" data-sort="email">
@@ -35,5 +35,4 @@
 
 
 </main>
-
 

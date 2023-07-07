@@ -48,7 +48,6 @@ class AuthController extends Controller
 				exit(json_encode(['error' => 'данный email уже зарегистрирован. ']));
 
 			Auth::setAuth($user);
-//			header('Location:post/index');
 			exit(json_encode(['ok' => 1]));
 		}
 		$this->view->render([]);

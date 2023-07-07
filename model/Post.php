@@ -14,7 +14,7 @@ class Post extends Model
 
 	public static function withComments($id){
 		$instance = new static();
-		$sql = "SELECT p.*, c.text as comment, u.name FROM posts as p inner join comments as c ON p.id=c.post_id inner join users  as u ON u.id=c.user_id WHERE p.id=?";
+		$sql = "SELECT p.*, c.text as comment, c.date as comment_date ,u.name FROM posts as p inner join comments as c ON p.id=c.post_id inner join users  as u ON u.id=c.user_id WHERE p.id=?";
 		$arr = $instance->db->query($sql,[$id]);
 		return $arr;
 	}

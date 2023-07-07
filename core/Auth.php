@@ -13,6 +13,7 @@ class Auth
 	{
 		$_SESSION['user'] = $user['id'];
 	}
+
 	public static function getUser()
 	{
 		return User::find($_SESSION['user']);
